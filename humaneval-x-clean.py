@@ -28,7 +28,7 @@ It consists of 820 high-quality human-crafted data samples (each with test cases
 _HOMEPAGE = "https://github.com/jbdoderlein/clean-human-eval-x"
 
 def get_url(name):
-    url = f"humaneval/{name}/humaneval.jsonl"
+    url = f"data/{name}/humaneval.jsonl"
     return url
 
 def split_generator(dl_manager, name):

@@ -66,9 +66,9 @@ if __name__ == "__main__":
         # for each language in the dir
         for lang in os.listdir(args.dir):
             # create a dir of lang name
-            Path(os.path.join(args.hfexport, lang)).mkdir(parents=True, exist_ok=True)
+            Path(os.path.join(args.hfexport, "data", lang)).mkdir(parents=True, exist_ok=True)
             # create a jsonl file
-            with open(os.path.join(args.hfexport, lang, "humaneval.jsonl"), "w") as ex_f:
+            with open(os.path.join(args.hfexport, "data", lang, "humaneval.jsonl"), "w") as ex_f:
                 for problem in os.listdir(os.path.join(args.dir, lang, "prompt")):
                     data = {}
                     data['task_id'] = f"{lang}/{problem.replace(EXTENSION[lang], '')}"
